@@ -2,6 +2,7 @@ from glob import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import gc
 
 file_list = glob('*.csv')
 
@@ -33,3 +34,7 @@ for file in file_list:
 
  
     plt.savefig(name+'LinearAndPoly.png', dpi=300)
+    
+    plt.close()
+    del x, y, z, p, j, k
+    gc.collect()
