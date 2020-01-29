@@ -3,9 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-All_files = glob('*.csv')
+file_list = glob('*.csv')
 
-for file in All_files:
+for file in file_list:
 
     name = file.split('.csv')[0]
 
